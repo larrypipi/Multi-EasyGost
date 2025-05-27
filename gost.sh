@@ -117,7 +117,7 @@ function Install_ct() {
 
   systemctl enable gost && systemctl restart gost
   echo "------------------------------"
-  if test -a /usr/bin/gost -a /usr/lib/systemctl/gost.service -a /etc/gost/config.json; then
+  if test -a /usr/bin/gost -a /usr/lib/systemd/system/gost.service -a /etc/gost/config.json; then
     echo "gost安装成功"
     rm -rf "$(pwd)"/gost
     rm -rf "$(pwd)"/gost.service
